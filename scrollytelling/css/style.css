@@ -152,3 +152,10 @@ p {
     width: 25%;
     height: 25%;
 }
+.spritesheet{
+width:63px;
+height: 64px;
+background-image: url("../img/img_elements_visuels/spritesheet.png");
+background-position: 0,0;
+
+}
