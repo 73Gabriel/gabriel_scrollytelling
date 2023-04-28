@@ -3,7 +3,7 @@ Projet scrollytelling: Experience Nocturne
 Projet scolaire dans le cadre du cours:
 Optimisation Web - Projet scrollytelling
 
-Conception
+Conception:
 
 -Gabriel Clerval
 
