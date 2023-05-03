@@ -44,8 +44,10 @@ h1 {
     color: white;
     font-family: 'Minecraft.ttf';
 }
-
 header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/img_arriere_plan/blackbackground.svg");
     position: relative;
     height: 100vh;
     display: flex;
@@ -112,23 +114,34 @@ p {
     opacity: 1;
     transform: translateY(0);
 }
-
+.chapitre1{
+    background-image: url("../img/img_arriere_plan/forestpixel1_adobe_express.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    height: 110vh;
+}
 .environment {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 120%;
 }
 
 .foreground-image {
     position: absolute;
     top: 52%;
     left: 60%;
-    z-index: 1;
+   
     
 }
-
+.scrollstory-item{
+    height: 100%;
+    background-image: url("../img/img_personnages/bed.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .scrollstory-item img {
     width: 100%;
     height: 100%;
