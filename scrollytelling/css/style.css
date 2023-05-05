@@ -119,6 +119,7 @@ p {
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
+    background-position: 0,100%;
     height: 110vh;
 }
 .environment {
