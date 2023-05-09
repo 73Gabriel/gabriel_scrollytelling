@@ -1,180 +1,201 @@
 @media only screen and (min-width: 768px) {
-  .box {
-    width: 50%;
-  }
+    .box {
+        width: 50%;
+    }
 }
 
 @font-face {
-  font-family: "Minecraft.ttf";
-  src: url("../css/minecraft/Minecraft.ttf");
+    font-family: "Minecraft.ttf";
+    src: url("../css/minecraft/Minecraft.ttf");
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 p {
-  color: white;
-  font-family: "Minecraft.ttf";
+    color: white;
+    font-family: "Minecraft.ttf";
 }
 
 .projet {
-  font-size: 11px;
-  font-family: Arial, sans-serif;
-  font-family: "Minecraft.ttf";
-  position: absolute;
-  bottom: 90px;
-  left: 0;
-  right: 0;
-  text-align: center;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    font-family: "Minecraft.ttf";
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 h1 {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: "Minecraft.ttf";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Minecraft.ttf";
 }
 
 .scrolldown {
-  color: white;
-  font-family: "Minecraft.ttf";
-  background: url("../img/img_elements_visuels/scroll.png");
+    color: white;
+    font-family: "Minecraft.ttf";
+    background: url("../img/img_elements_visuels/scroll.png");
 }
+
 header {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/img_arriere_plan/blackbackground.svg");
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/img_arriere_plan/blackbackground.svg");
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 header img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .chapitre1 {
-  position: relative;
-  height: 100vh;
+    position: relative;
+    height: 100vh;
 }
 
 .scrollstory-item {
-  position: relative;
-  height: 100vh;
+    position: relative;
+    height: 100vh;
 }
 
 .visuel1 {
-  position: relative;
-  top: 300px;
-  bottom: 1000px;
-  z-index: 1;
+    position: relative;
+    top: 300px;
+    bottom: 1000px;
+    z-index: 1;
+    background: url("../scrollytelling/img/img_arriere_plan/housepixel-1.png_adobe_express.svg");
 }
 
 .contenu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-  color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    color: white;
 }
 
 h1 {
-  font-size: 4rem;
-  color: white;
-  text-shadow: 1px 1px 2px black;
-  margin: 0;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    margin: 0;
 }
 
 h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 p {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
-.chapitre img {
-}
+
 .chapitre {
-  background-image: url("../img/img_arriere_plan/forestpixel1_adobe_express.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: relative;
-  background-position: 0, 100%;
-  height: 110vh;
+    background-image: url("../img/img_arriere_plan/forestpixel1_adobe_express.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    background-position: 0, 100%;
+    height: 110vh;
+    z-index: 1;
 }
+
+.backgroundchapitre {
+    background-image: url("../img/img_arriere_plan/forestpixel1_adobe_express.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    background-position: 0, 100%;
+    height: 110vh;
+    z-index: 1;
+}
+
 .environment {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120%;
 }
 
 .maison {
-  position: absolute;
-  top: 52%;
-  left: 60%;
-  width: 40%;
-  height: 50%;
+    position: absolute;
+    top: 52%;
+    left: 60%;
+    width: 40%;
+    height: 50%;
 }
+
 .scrollstory-item {
-  height: 100%;
-  background-image: url("../img/img_personnages/bed.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+    height: 100%;
+    background-image: url("../img/img_personnages/bed.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
 }
+
 .scrollstory-item img {
-  width: 100%;
-  height: 40%;
-  top: 45%;
-  max-width: ;
+    width: 100%;
+    height: 40%;
+    top: 45%;
 }
 
 .background-image {
-  position: relative;
-  width: 100%;
-  height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .environment .background-image {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .sleep {
-  position: absolute;
-  top: 0;
-  width: 25%;
-  height: 10%;
+    position: absolute;
+    top: 0;
+    width: 25%;
+    height: 10%;
 }
+
 .spritesheet {
-  width: 63px;
-  height: 64px;
-  background-image: url("../img/img_elements_visuels/spritesheet.png");
-  background-position: 0, 0;
+    width: 63px;
+    height: 64px;
+    background-image: url("../img/img_elements_visuels/spritesheet.png");
+    background-position: 0, 0;
 }
-.chapitre2 {
+
+.ghost {
+    width: 45%;
+    height: 30%;
+    position: relative;
+    bottom: 40%;
 }
