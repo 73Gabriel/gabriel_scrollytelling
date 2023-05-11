@@ -1,6 +1,23 @@
 import { gsap } from "gsap";
 
-window.addEventListener("scroll", function() {});
+const body = document.querySelector('body');
+
+
+let scrollTimer;
+
+
+function addScrollClass() {
+    body.classList.add('is-scrolling');
+
+    clearTimeout(scrollTimer);
+
+    scrollTimer = setTimeout(() => {
+        body.classList.remove('is-scrolling');
+    }, 1000);
+}
+
+
+window.addEventListener('scroll', addScrollClass);
 
 gsap.registerPlugin(ScrollTrigger);
 
