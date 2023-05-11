@@ -149,7 +149,7 @@ p {
 .maison {
     position: absolute;
     top: 52%;
-    right:  60%;
+    right: 60%;
     width: 40%;
     height: 50%;
 }
@@ -197,48 +197,95 @@ p {
     width: 45%;
     height: 30%;
     position: relative;
-   top: 70%;
-   left: 30%;
+    top: 70%;
+    left: 30%;
 }
-.trou{
+
+.trou {
     height: 20%;
     width: 15%;
     position: relative;
-   bottom:-72%;
-   left: 36%;
-   z-index: 2;
-   animation-name: marche2;
-
+    bottom: -72%;
+    left: 36%;
+    z-index: 2;
+    animation-name: marche2;
 }
+
+
+/* animation du zzz */
+
 .zzz {
     position: absolute;
-    top: 5%;
+    top: 25%;
     left: 15%;
     background-image: url("../img/img_elements_visuels/zzz.svg");
+    animation-timing-function: steps(33);
     background-repeat: no-repeat;
+    animation-duration: 3s;
     z-index: 1;
     overflow: hidden;
     width: 50vw;
     aspect-ratio: 1/1;
-    animation-name: marche;
-    animation-duration: 5s;
+    animation-name: sleep;
     animation-iteration-count: infinite;
-    animation-timing-function: steps(33);
     background-size: 100% -3300%;
-  }
-  @keyframes marche {
+}
+
+
+/* chapitre 2 le personnage dort */
+
+@keyframes sleep {
     from {
-      background-position: 0 0;
+        background-position: 0 0;
     }
     to {
-      background-position: 0 -26400px;
+        background-position: 0 -26400px;
     }
-  }
-  @keyframes marche2 {
-    from {
-      background-position: 0 0;
+}
+
+
+/* chapitre 3 ghost s'anime et commencer a bouger */
+
+.ghostmove {
+    width: 45%;
+    height: 30%;
+    position: relative;
+    top: 70%;
+    left: 30%;
+    z-index: 2;
+    animation: move 2s linear forwards, fall 1s linear forwards 2s;
+    animation-iteration-count: 1;
+}
+
+
+/* chapitre 3 ghost s'anime et arrive au trou */
+
+@keyframes move {
+    0% {
+        left: 0;
     }
-    to {
-      background-position: -1920px 0px;
+    50% {
+        left: calc(50% - 25px);
     }
-  }
+    100% {
+        left: calc(70% - 50px);
+    }
+}
+
+
+/* tombe dans le trou */
+
+@keyframes fall {
+    0% {
+        top: 70%;
+        transform: rotate(0deg);
+    }
+    50% {
+        top: 95%;
+        transform: rotate(180deg);
+    }
+    100% {
+        top: 110%;
+        transform: rotate(360deg);
+    }
+}
