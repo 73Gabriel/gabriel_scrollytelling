@@ -2,9 +2,7 @@ import { gsap } from "gsap";
 
 const body = document.querySelector('body');
 
-
 let scrollTimer;
-
 
 function addScrollClass() {
     body.classList.add('is-scrolling');
@@ -16,12 +14,31 @@ function addScrollClass() {
     }, 1000);
 }
 
-
 window.addEventListener('scroll', addScrollClass);
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.from('#chapitre1 maison', {
+    scale: 50,
+    stagger: 0.25,
+    duration: 3,
+
+});
+
+gsap.to('.maison', {
+    scale: 1.5,
+    duration: 5,
+    scrollTrigger: {
+        trigger: 'maison',
+        markers: true,
+        start: 'bottom bottom'
+    }
+})
+
+
+
+
+
 
 gsap.fromTo(
     ".maison", {
