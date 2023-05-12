@@ -1,0 +1,424 @@
+@media only screen and (min-width: 768px) {
+    .box {
+        width: 50%;
+    }
+}
+
+@font-face {
+    font-family: "Minecraft.ttf";
+    src: url("../css/minecraft/Minecraft.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Minecraft.ttf";
+    overflow-x: hidden;
+}
+
+.projet {
+    font-size: 11px;
+    font-family: "Minecraft.ttf";
+    position: absolute;
+    color: white;
+    bottom: 90px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Minecraft.ttf";
+}
+
+.scrolldown {
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "Minecraft.ttf";
+    z-index: 1;
+    position: absolute;
+    top: 20%;
+}
+
+.scroll {
+    position: absolute;
+    background-image: url("../img/img_elements_visuels/mousescrolldown.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    left: 25%;
+    top: 30%;
+    position: relative;
+    z-index: 2;
+    transform: scale(0.6);
+    animation: updown 1s ease-in-out infinite alternate;
+}
+
+@keyframes updown {
+    0% {
+        top: 30%;
+    }
+    100% {
+        top: 20%;
+    }
+}
+
+header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/img_arriere_plan/blackbackground.svg");
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#chapitre1 {
+    background-image: url("../img/img_arriere_plan/forestpixel1_adobe_express.svg");
+    position: relative;
+    height: 100vh;
+    background-position: 10% 100%;
+}
+
+#chapitre2 {
+    background-image: url("../img/img_personnages/bed.svg");
+    position: relative;
+    height: 100vh;
+    background-position: 100% 10%;
+}
+
+#chapitre3 {
+    background-image: url("../img/img_arriere_plan/forestpixel1_adobe_express.svg");
+    position: relative;
+    height: 100vh;
+    background-position: 10% 100%;
+}
+
+#chapitre4 {
+    background-image: url("../img/img_arriere_plan/forestpixel1_adobe_express.svg");
+    position: relative;
+    height: 100vh;
+    background-position: 10% 100%;
+}
+
+#chapitre5 {
+    background-image: url("../img/img_elements_visuels/underground.png");
+    position: relative;
+    height: 100vh;
+    background-position: 10% 100%;
+}
+
+#chapitre6 {
+    background-image: url("../img/img_elements_visuels/cave.jpg");
+    position: relative;
+    height: 100vh;
+    background-position: 10% 100%;
+}
+
+#chapitre7 {
+    background-image: url("../img/img_personnages/bed.svg");
+    position: relative;
+    height: 100vh;
+    background-position: 100% 10%;
+}
+
+.contenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    /* width: 80%; */
+    /* max-width: 600px; */
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    z-index: 3;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.shook {
+    bottom: 30%;
+}
+
+.chapitre {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    background-position: 0, 100%;
+    z-index: 1;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.maison {
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 52%;
+    right: 60%;
+    width: 40%;
+    height: 50%;
+    background-image: url("../img/img_arriere_plan/housepixel-1.png_adobe_express.svg");
+    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.maison1 {
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 52%;
+    right: 60%;
+    width: 40%;
+    height: 50%;
+    background-image: url("../img/img_arriere_plan/housepixel-1.png_adobe_express.svg");
+    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform-origin: center;
+}
+
+.sleep {
+    top: 39%;
+    left: 42%;
+    width: 45%;
+    height: 40%;
+    position: relative;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-image: url("../img/img_personnages/asleepcut.svg");
+}
+
+.dead {
+    top: 20%;
+    right: 10%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-image: url("../img/img_personnages/dead.svg");
+}
+
+.ghost {
+    background-image: url("../img/img_personnages/ghost.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200%;
+    position: relative;
+    bottom: 5%;
+    right: 10%;
+    z-index: 2;
+    transform: scale(0.3);
+}
+
+.trou {
+    background-image: url("../img/img_elements_visuels/trou.png");
+    height: 300%;
+    width: 300%;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    bottom: 23%;
+    left: 83%;
+    z-index: 1;
+    animation-name: marche2;
+}
+
+.cave {
+    background-image: url("../img/img_elements_visuels/cave.svg");
+    position: relative;
+    height: 100vh;
+    background-position: 10% 100%;
+    z-index: 2;
+}
+
+
+/* animation du zzz */
+
+.zzz {
+    position: absolute;
+    top: 5%;
+    left: 18%;
+    background-image: url("../img/img_elements_visuels/zzz.svg");
+    animation-timing-function: steps(33);
+    background-repeat: no-repeat;
+    animation-duration: 3s;
+    z-index: 1;
+    overflow: hidden;
+    width: 50vw;
+    aspect-ratio: 1/1;
+    animation-name: sleep;
+    animation-iteration-count: infinite;
+    background-size: 100% -3300%;
+}
+
+.monstre1 {
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 75%;
+    right: 50%;
+    width: 40%;
+    height: 50%;
+    background-image: url("../img/img_elements_visuels/eyemonster_adobe_express.svg");
+    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform-origin: center;
+}
+
+.glace {
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 75%;
+    right: 50%;
+    width: 40%;
+    height: 50%;
+    background-image: url("../img/img_elements_visuels/eyemonster_adobe_express.svg");
+    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform-origin: center;
+}
+
+
+/* chapitre 2 le personnage dort */
+
+
+/* @keyframes sleep {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -26400px;
+    }
+} */
+
+
+/* chapitre 3 ghost s'anime et commencer a bouger */
+
+.ghostmove {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 20%;
+    right: 10%;
+    z-index: 2;
+    /* animation: move 4s linear forwards, fall 1s linear forwards 2s; */
+    animation-iteration-count: 1;
+    background-image: url("../img/img_personnages/ghost_shock.svg");
+    transform: scale(0.3);
+}
+
+.ghostfall {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 1%;
+    left: 40%;
+    bottom: 100%;
+    background-image: url("../img/img_personnages/ghost_shock.svg");
+    transform: scale(0.3);
+    z-index: 2;
+    /* animation: falling 8s linear forwards 2s; */
+    ;
+}
+
+.ghostscared {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 20%;
+    left: 0%;
+    background-image: url("../img/img_personnages/ghost_scare.svg");
+    transform: scale(0.3);
+    z-index: 2;
+    /* animation: falling 8s linear forwards 2s; */
+    ;
+}
+
+
+/*------------------------- code brouillon a voir si mettre dans le final -------------------------------------------------------------------*/
+
+
+/* chapitre 3 ghost s'anime et arrive au trou */
+
+
+/* @keyframes move {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(40% - 25px);
+    }
+    100% {
+        left: calc(40% - 10px);
+    }
+}
+ */
+
+
+/* tombe dans le trou */
+
+
+/* @keyframes fall {
+    0% {
+        top: 23%;
+        transform: translateX(0) scale(0.3) rotate(0deg);
+    }
+    50% {
+        top: 95%;
+        transform: translateX(0) scale(0.3) rotate(180deg);
+    }
+    100% {
+        top: 200%;
+        transform: translateX(0) scale(0.3) rotate(360deg);
+    }
+}
+
+@keyframes falling {
+    0% {
+        top: 23%;
+        transform: translateX(0) scale(0.3) rotate(0deg);
+    }
+    50% {
+        top: 95%;
+        transform: translateX(0) scale(0.3) rotate(180deg);
+    }
+    100% {
+        top: 200%;
+        transform: translateX(0) scale(0.3) rotate(360deg);
+    }
+} */
+
+
+/*------------------------- code brouillon a voir si mettre dans le final -------------------------------------------------------------------*/
