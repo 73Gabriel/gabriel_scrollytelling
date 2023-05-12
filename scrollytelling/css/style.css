@@ -223,7 +223,7 @@ p {
 }
 
 .ghost {
-    background-image: url("../img/img_personnages/ghost_scare.svg");
+    background-image: url("../img/img_personnages/ghost.svg");
     background-repeat: no-repeat;
     width: 100%;
     height: 200%;
@@ -275,6 +275,36 @@ p {
     background-size: 100% -3300%;
 }
 
+.monstre1 {
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 75%;
+    right: 50%;
+    width: 40%;
+    height: 50%;
+    background-image: url("../img/img_elements_visuels/eyemonster_adobe_express.svg");
+    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform-origin: center;
+}
+
+.glace {
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 75%;
+    right: 50%;
+    width: 40%;
+    height: 50%;
+    background-image: url("../img/img_elements_visuels/eyemonster_adobe_express.svg");
+    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform-origin: center;
+}
+
 
 /* chapitre 2 le personnage dort */
 
@@ -312,6 +342,20 @@ p {
     left: 40%;
     bottom: 100%;
     background-image: url("../img/img_personnages/ghost_shock.svg");
+    transform: scale(0.3);
+    z-index: 2;
+    /* animation: falling 8s linear forwards 2s; */
+    ;
+}
+
+.ghostscared {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 1%;
+    left: 40%;
+    bottom: 100%;
+    background-image: url("../img/img_personnages/ghost_scare.svg");
     transform: scale(0.3);
     z-index: 2;
     /* animation: falling 8s linear forwards 2s; */

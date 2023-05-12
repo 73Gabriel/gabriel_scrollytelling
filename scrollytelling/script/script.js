@@ -60,33 +60,8 @@ gsap.from(p, {
         scrub: true
     }
 });
-gsap.from(contenu, {
-    opacity: 0,
-    y: 100,
-    duration: 1,
-    ease: 'power1.out',
-    scrollTrigger: {
-        trigger: contenu,
-        start: 'top 80%',
-        end: 'bottom 20%',
-        scrub: true
-    }
-});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const text = document.querySelector('.contenu p');
 const zzz = document.querySelector('.zzz');
 const section = document.querySelector('chapitre2');
 
@@ -126,11 +101,6 @@ gsap.to(sleep, {
 });
 
 
-
-
-
-
-
 //floating animation pour le fantome
 const ghost = document.querySelector('.ghost');
 
@@ -145,7 +115,7 @@ gsap.to(ghost, {
         scrub: true
     }
 });
-
+const ghostScared = document.querySelector('.ghostscared');
 const ghostMove = document.querySelector('.ghostmove');
 const ghostFall = document.querySelector('.ghostfall');
 
@@ -176,11 +146,118 @@ t2.to(ghostMove, {
 const t3 = gsap.timeline({
     scrollTrigger: {
         trigger: ".ghostmove",
-        start: "top 80%",
+        start: "top 10%",
         end: "bottom 20%",
         scrub: true,
     },
 });
+
+gsap.to(ghostFall, {
+    y: '300%',
+    duration: 100,
+    ease: 'power4.out',
+    rotate: 90,
+    transformOrigin: 'center center',
+    scrollTrigger: {
+        trigger: ".ghostfall",
+        start: 'top 20%',
+        end: 'bottom 20%',
+        onEnter: () => {
+            // play the animation when scrolling down
+            gsap.to(ghostFall, {
+                y: '150%',
+                duration: 0,
+                ease: 'power4.out',
+                rotate: 360,
+                transformOrigin: 'center center',
+            });
+        },
+        onLeaveBack: () => {
+            // go back to the initial position when scrolling up
+            gsap.to(ghostFall, {
+                y: '0%',
+                duration: 0,
+                ease: 'power4.out',
+                rotate: 0,
+                transformOrigin: 'center center',
+                reverse: true,
+            });
+        },
+    },
+});
+
+gsap.to(text, {
+    y: -100,
+    duration: 1,
+    ease: 'power2.out',
+    scrollTrigger: {
+        trigger: text,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: true,
+    }
+});
+gsap.to('.monstre1', {
+    x: '170%',
+    duration: 1,
+    ease: 'power2.out',
+    scrollTrigger: {
+        trigger: '.monstre1',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: true,
+    },
+});
+
+const scream = document.querySelector('.scream');
+
+
+gsap.to(scream, {
+    y: '1000%',
+    duration: 10,
+    ease: 'power2.out',
+    opacity: 0,
+    scrollTrigger: {
+        trigger: scream,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: true
+    }
+});
+const weird = document.querySelector('.weird');
+
+gsap.to(weird, {
+    y: 20,
+    duration: 2,
+    repeat: -1,
+    yoyo: true,
+    ease: 'power1.inOut'
+});
+
+const feu = document.querySelector('#feu');
+const glace = document.querySelector('#glace');
+
+// Morph the path1 to path2
+gsap.to(feu, {
+    morphSVG: glace,
+    duration: 2,
+    ease: "power2.inOut"
+});
+gsap.to(ghostScared, {
+    x: '-60%',
+    duration: 1,
+    ease: 'power2.out',
+    scrollTrigger: {
+        trigger: ghostScared,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: true
+    }
+});
+
+
+
+
 
 // add the animation to the timeline
 // t3.to(".ghostfall", {
