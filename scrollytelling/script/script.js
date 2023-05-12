@@ -1,7 +1,4 @@
-import { gsap } from "gsap";
-
 const body = document.querySelector('body');
-
 let scrollTimer;
 
 function addScrollClass() {
@@ -18,46 +15,56 @@ window.addEventListener('scroll', addScrollClass);
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from('#chapitre1 maison', {
-    scale: 50,
-    stagger: 0.25,
-    duration: 3,
+gsap.to('.maison1', {
+    scale: 15,
+    duration: 2,
 
+    scrollTrigger: {
+        trigger: '.maison1',
+        markers: true,
+
+        start: 'bottom bottom',
+        scrub: true
+    },
+    transformOrigin: 'center center',
+    perspective: 800,
+    transformStyle: 'preserve-3d',
+    ease: 'power2.out'
 });
 
-gsap.to('.maison', {
-    scale: 1.5,
-    duration: 5,
+
+const zzz = document.querySelector('.zzz');
+const section = document.querySelector('chapitre2');
+
+// créer la timeline pour l'animation du zzz
+const tl = gsap.timeline({
     scrollTrigger: {
-        trigger: 'maison',
-        markers: true,
-        start: 'bottom bottom'
+        trigger: zzz,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+        pin: section,
+        markers: true
     }
-})
+});
 
+// ajouter l'animation a la timeline pour qu'on puisse voir le zzz en scrollant
+tl.to(zzz, {
+    backgroundPosition: "0 -26400px",
+    duration: 0.2,
+    ease: "steps(33)"
+});
+//floating animation pour le fantome
+const ghost = document.querySelector('.ghost');
 
-
-
-
-
-gsap.fromTo(
-    ".maison", {
-        x: "0",
-        y: "70vh",
-    }, {
-        scrollTrigger: {
-            trigger: "#chapitre1",
-            pin: true,
-            scrub: true,
-        },
-        x: document.querySelector(".chapitre").offsetWidth -
-            document.querySelector(".maison").offsetWidth,
-        y: "40vh",
+gsap.to(ghost, {
+    y: '-40%',
+    duration: 40,
+    ease: 'sine.inOut',
+    scrollTrigger: {
+        trigger: ghost,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
     }
-);
-
-ScrollTrigger.create({
-    trigger: ".scroll-story__header",
-    start: "top top",
-    end: "bottom",
 });
