@@ -54,6 +54,29 @@ tl.to(zzz, {
     duration: 0.2,
     ease: "steps(33)"
 });
+
+const sleep = document.querySelector('.sleep');
+
+gsap.to(sleep, {
+    y: '120%',
+
+    duration: 1,
+    ease: 'power4.out',
+    scrollTrigger: {
+        trigger: sleep,
+        pin: sleep,
+        start: 'top 20%',
+        end: 'bottom 20%',
+        scrub: true
+    }
+});
+
+
+
+
+
+
+
 //floating animation pour le fantome
 const ghost = document.querySelector('.ghost');
 
@@ -68,3 +91,47 @@ gsap.to(ghost, {
         scrub: true
     }
 });
+
+const ghostMove = document.querySelector('.ghostmove');
+const ghostFall = document.querySelector('.ghostfall');
+
+const t2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ghostMove,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+    },
+});
+
+t2.to(ghostMove, {
+        left: "calc(40% - 25px)",
+        duration: 1,
+    })
+    .to(ghostMove, {
+        left: "calc(40% - 10px)",
+        duration: 1,
+    })
+    .to(".ghostmove", {
+        duration: 1,
+        ease: "power4.out",
+        top: "200%",
+        transform: "translateX(0) scale(0.3) rotate(360deg)",
+    });
+
+const t3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".ghostmove",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+    },
+});
+
+// add the animation to the timeline
+// t3.to(".ghostfall", {
+//     duration: 1,
+//     ease: "power4.out",
+//     top: "200%",
+//     transform: "translateX(0) scale(0.3) rotate(360deg)",
+// });
