@@ -115,10 +115,17 @@ header {
 }
 
 #chapitre6 {
-    background-image: url("../img/img_elements_visuels/underground.png");
+    background-image: url("../img/img_elements_visuels/cave.jpg");
     position: relative;
     height: 100vh;
     background-position: 10% 100%;
+}
+
+#chapitre7 {
+    background-image: url("../img/img_personnages/bed.svg");
+    position: relative;
+    height: 100vh;
+    background-position: 100% 10%;
 }
 
 .contenu {
@@ -142,6 +149,7 @@ h1 {
 h2 {
     font-size: 3rem;
     margin-bottom: 20px;
+    z-index: 3;
 }
 
 p {
@@ -203,6 +211,17 @@ p {
     background-image: url("../img/img_personnages/asleepcut.svg");
 }
 
+.dead {
+    top: 20%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-image: url("../img/img_personnages/dead.svg");
+}
+
 .ghost {
     background-image: url("../img/img_personnages/ghost_scare.svg");
     background-repeat: no-repeat;
@@ -226,6 +245,14 @@ p {
     left: 83%;
     z-index: 1;
     animation-name: marche2;
+}
+
+.cave {
+    background-image: url("../img/img_elements_visuels/cave.svg");
+    position: relative;
+    height: 100vh;
+    background-position: 10% 100%;
+    z-index: 2;
 }
 
 

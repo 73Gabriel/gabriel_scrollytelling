@@ -14,7 +14,7 @@ function addScrollClass() {
 window.addEventListener('scroll', addScrollClass);
 
 gsap.registerPlugin(ScrollTrigger);
-
+//zoom in sur la maison ou hendy dort
 gsap.to('.maison1', {
     scale: 15,
     duration: 2,
@@ -31,6 +31,60 @@ gsap.to('.maison1', {
     transformStyle: 'preserve-3d',
     ease: 'power2.out'
 });
+
+//Dans une nuit de primtemps, dans une maison entiurée de foret, hendy se voit rveiller en sursaut
+const contenu = document.querySelector('.contenu');
+const h2 = contenu.querySelector('h2');
+const p = contenu.querySelector('p');
+
+gsap.from(h2, {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    scrollTrigger: {
+        trigger: h2,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true
+    }
+});
+
+gsap.from(p, {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    scrollTrigger: {
+        trigger: p,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true
+    }
+});
+gsap.from(contenu, {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    ease: 'power1.out',
+    scrollTrigger: {
+        trigger: contenu,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: true
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const zzz = document.querySelector('.zzz');
@@ -54,7 +108,7 @@ tl.to(zzz, {
     duration: 0.2,
     ease: "steps(33)"
 });
-
+//hendy dort paisiblement il descend au scroll et remonte avec
 const sleep = document.querySelector('.sleep');
 
 gsap.to(sleep, {
