@@ -161,6 +161,10 @@ p {
     transform: translateY(0);
 }
 
+.shook {
+    bottom: 30%;
+}
+
 .chapitre {
     background-repeat: no-repeat;
     background-size: 100%;
@@ -213,7 +217,7 @@ p {
 
 .dead {
     top: 20%;
-    left: 0%;
+    right: 10%;
     width: 100%;
     height: 100%;
     position: relative;
@@ -349,12 +353,12 @@ p {
 }
 
 .ghostscared {
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     position: relative;
-    top: 1%;
-    left: 40%;
-    bottom: 100%;
+    top: 20%;
+    left: 0%;
     background-image: url("../img/img_personnages/ghost_scare.svg");
     transform: scale(0.3);
     z-index: 2;

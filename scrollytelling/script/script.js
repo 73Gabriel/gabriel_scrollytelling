@@ -21,7 +21,7 @@ gsap.to('.maison1', {
 
     scrollTrigger: {
         trigger: '.maison1',
-        markers: true,
+
 
         start: 'bottom bottom',
         scrub: true
@@ -73,7 +73,7 @@ const tl = gsap.timeline({
         end: "bottom 20%",
         scrub: true,
         pin: section,
-        markers: true
+
     }
 });
 
@@ -163,7 +163,7 @@ gsap.to(ghostFall, {
         start: 'top 20%',
         end: 'bottom 20%',
         onEnter: () => {
-            // play the animation when scrolling down
+
             gsap.to(ghostFall, {
                 y: '150%',
                 duration: 0,
@@ -173,7 +173,7 @@ gsap.to(ghostFall, {
             });
         },
         onLeaveBack: () => {
-            // go back to the initial position when scrolling up
+
             gsap.to(ghostFall, {
                 y: '0%',
                 duration: 0,
@@ -254,7 +254,25 @@ gsap.to(ghostScared, {
         scrub: true
     }
 });
+const shook = document.querySelector('.shook');
 
+gsap.to(shook, {
+    duration: 2,
+    repeat: -1, // repeat indefinitely
+    ease: 'power1.inOut',
+    motionPath: {
+        path: [
+            { x: 0, y: 0 },
+            { x: 100, y: 100 },
+            { x: 0, y: 200 },
+            { x: -100, y: 100 },
+            { x: 0, y: 0 },
+        ],
+        curviness: 1.25, // make the circles more rounded
+    },
+    rotation: 360, // rotate the element 360 degrees
+    transformOrigin: 'center center',
+});
 
 
 
